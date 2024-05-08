@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="Width=device-Width, initial-scale=1">
+<style>
+body{
+   margin:0;
+   font-family:Arial, Helvetica, sans-serif;
+}
+
+#header{
+  background-color:#f1f1f1;
+  padding:50px 10px;
+  color:black;
+  text-align:center;
+  font-size:90px;
+  font-weight:bold;
+  position:fixed;
+  top:0;
+  Width:100%;
+  transition:0.2s;
+ }
+</style>
+</head>
+<body>
+
+<div id="header">Header</div>
+
+
+
+<div style="margin-top:200px;padding:15px 15px 2500px;font-size:30px">
+<p><b>This example demonstrates how to shrink a header when the user starts to scroll the page<b></p>
+<p>Scroll down this frame to see the effect!</p>
+<p>Scroll to the top to remove the effect.</p>
+<p>Lorem ipsum dolor dummy text sit amet, consectetur adipiscing elit, sed do eiusmod</p>
+</div>
+
+<script>
+//when the user scrolls down 50px from the top of the document, resize the header font size
+window.onscroll=function() {scrollFunction()};
+
+function scrollFunction() {
+if(document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+document.getElementById("header").style.fontSize ="30px";
+} else{
+  document.getElementById("header").style.fontSize ="90px";
+ }
+}
+
+</script>
+
+<body>
+</html>
